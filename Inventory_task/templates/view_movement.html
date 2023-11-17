@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <title>View Product Movement</title>
+</head>
+<body>
+    <h1>Product Movement Details</h1>
+
+    <p><strong>Movement ID:</strong> {{ movement.movement_id }}</p>
+    <p><strong>Timestamp:</strong> {{ movement.timestamp }}</p>
+    <p><strong>From Location:</strong> {{ movement.from_location }}</p>
+    <p><strong>To Location:</strong> {{ movement.to_location }}</p>
+    <p><strong>Product ID:</strong> {{ movement.product_id }}</p>
+    <p><strong>Quantity:</strong> {{ movement.qty }}</p>
+
+    <br>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+    <br>
+    <a href="{{ url_for('movements') }}">Back to Movements</a>
+</body>
+</html>

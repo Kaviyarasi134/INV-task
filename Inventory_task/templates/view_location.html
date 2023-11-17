@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <title>View location</title>
+</head>
+<body>
+    <h1>location Details</h1>
+    <p><strong>location ID:</strong> {{ location.location_id }}</p>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+    <br>
+    <a href="{{ url_for('manage_locations') }}">Back to location</a>
+</body>
+</html>

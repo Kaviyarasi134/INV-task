@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page </title>
+   
+    <link  type= "text/css" rel="stylesheet" href="{{url_for('static',filename='css/boostrap.css')}}">
+</head>
+<style>
+    .header{
+        background-color:green;
+        color:white;
+        text-align: center;
+    }
+    
+</style>
+<body>
+    <div class="container">
+        <div class="row header"> <!-- header-->
+          <div class="col-sm-12">
+            <h1>Aerele Technologies</h1>
+            <h2>Inventory Operations</h2>
+          </div>
+      </div>
+      <!--Body-->
+      <div class="row">
+        <div class="col-sm-4 menu">
+        <nav>
+          <ul class="list-group">
+            <li><a href="{{ url_for('manage_products') }}">Manage Products</a></li>
+            <li><a href="{{ url_for('manage_locations') }}">Manage Locations</a></li>
+            <li><a href="{{ url_for('add_movement') }}">Manage Product Movements</a></li>
+            <li><a href="{{ url_for('generate_report') }}">Balance Report</a></li>
+          </ul>
+        </nav>
+        <div class="col-sm-8">
+            <h3>welcome to Inventory Management</h3>
+        </div>
+    </div>
+      </div>
+    <!--Footer-->
+    <div class="row header">
+        <div class="col-sm-4">
+            <p>&copy; 2023 Aerele Technologies. All rights reserved.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
